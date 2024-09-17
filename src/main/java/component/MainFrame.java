@@ -1,8 +1,8 @@
-package component;
+package main.java.component;
 
-import model.FileWrapper;
-import tokenization.MyCustomTokenizationAlgorithm;
-import tokenization.TokenizationAlgorithm;
+import main.java.model.FileWrapper;
+import main.java.tokenization.MyCustomTokenizationAlgorithm;
+import main.java.tokenization.TokenizationAlgorithm;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -116,9 +116,8 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    private void placeFilesInPane(File directory) {
+    public void placeFilesInPane(File directory) {
         listModel.clear();
-//        listModel.re
         placeFiles(directory);
     }
 
@@ -152,6 +151,14 @@ public class MainFrame extends JFrame {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public JTextField getWordField() {
+        return this.wordField;
+    }
+
+    public DefaultListModel<String> getListModel() {
+        return this.listModel;
     }
 
 }

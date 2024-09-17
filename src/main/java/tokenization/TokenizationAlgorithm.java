@@ -1,4 +1,4 @@
-package tokenization;
+package main.java.tokenization;
 
 import java.io.File;
 import java.util.List;
